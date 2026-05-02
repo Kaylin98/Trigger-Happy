@@ -541,6 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   muzzleFlash: {fileID: 4617349890300305739}
+  impactEffect: {fileID: 177203324549360939, guid: 3784ac3e975663f429cfbed7ef09d280, type: 3}
   animator: {fileID: 1847705894}
 --- !u!1 &510063150
 GameObject:
@@ -2175,63 +2176,7 @@ PrefabInstance:
     - target: {fileID: 6277202941128332789, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f1b0fea076fb0574d868f6e3d9523f52, type: 2}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: ShapeModule.type
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: moveWithTransform
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.45882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.94509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729577515571657494, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: f459500efe78a0b48b29caaa8640fa5c, type: 2}
     - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.227
@@ -2271,10 +2216,6 @@ PrefabInstance:
     - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
