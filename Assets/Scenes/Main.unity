@@ -508,6 +508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 454459157}
+  - component: {fileID: 454459158}
   m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
@@ -531,6 +532,18 @@ Transform:
   - {fileID: 1327796229}
   m_Father: {fileID: 1786077325}
   m_LocalEulerAnglesHint: {x: 0, y: 83.343, z: -3.477}
+--- !u!114 &454459158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454459156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55262dc9a07e5740a3a439f59bd4870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
 --- !u!1 &510063150
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1010,7 @@ GameObject:
   - component: {fileID: 922815470}
   - component: {fileID: 922815469}
   - component: {fileID: 922815468}
+  - component: {fileID: 922815471}
   m_Layer: 6
   m_Name: Robot
   m_TagString: Untagged
@@ -1030,7 +1044,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1047,13 +1061,36 @@ Transform:
   m_GameObject: {fileID: 922815467}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9995321, z: -0, w: -0.030587733}
-  m_LocalPosition: {x: 19.063046, y: 3.996, z: -14.312253}
+  m_LocalPosition: {x: 19.017843, y: 2.7633493, z: -14.33649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 759151751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 183.506, z: 0}
+--- !u!136 &922815471
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922815467}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1135393397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ee6b4e96d25e3e4f9f31ed5e2666cdb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.801
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ee6b4e96d25e3e4f9f31ed5e2666cdb, type: 3}
       propertyPath: m_LocalPosition.z
