@@ -4,8 +4,10 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] Animator animator;
     StarterAssetsInputs input;
     int damageAmount = 1;
+    const string SHOOT_STRING = "Shoot";
 
     void Awake() 
     {
@@ -22,6 +24,8 @@ public class Weapon : MonoBehaviour
         if (!input.shoot) return;
 
         muzzleFlash.Play();
+        animator.Play(SHOOT_STRING, 0, 0f);
+        input.ShootInput(false);
 
         RaycastHit hit;
 
@@ -31,6 +35,5 @@ public class Weapon : MonoBehaviour
             enemyHealth?.TakeDamage(damageAmount);
         }
 
-            input.ShootInput(false);
     }
 }
