@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] WeaponSO weaponSO;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] ParticleSystem impactEffect;
     [SerializeField] Animator animator;
     StarterAssetsInputs input;
-    int damageAmount = 1;
     const string SHOOT_STRING = "Shoot";
 
     void Awake() 
@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
         {
             Instantiate(impactEffect, hit.point, Quaternion.identity);
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
-            enemyHealth?.TakeDamage(damageAmount);
+            enemyHealth?.TakeDamage(weaponSO.Damage);
         }
 
     }
