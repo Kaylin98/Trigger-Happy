@@ -15,3 +15,4 @@ MonoBehaviour:
   Damage: 2
   FireRate: 0.5
   MaxAmmo: 30
+  impactEffect: {fileID: 5290996938755904346, guid: 3784ac3e975663f429cfbed7ef09d280, type: 3}

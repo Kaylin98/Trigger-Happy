@@ -598,6 +598,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656d44e8a0f40ce4b8f93ee38394e3c5, type: 3}
+--- !u!1 &49895464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8082357864679361025, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
+  m_PrefabInstance: {fileID: 6718221011928501358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &49895467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49895464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe97a7154f7a434b9d89199b3741114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveWeapon
+  weaponSO: {fileID: 11400000, guid: b1632a1efc8998540974001140232246, type: 2}
 --- !u!4 &57720492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2953970d4a333b429e01bd9fe885ade, type: 3}
@@ -20733,7 +20751,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8082357864679361025, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49895467}
   m_SourcePrefab: {fileID: 100100000, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
 --- !u!1001 &7487958772534239741
 PrefabInstance:

@@ -6,5 +6,7 @@ public class WeaponSO : ScriptableObject
     public int Damage = 1;
     public float FireRate = .5f;
     public int MaxAmmo = 30;
+    public GameObject impactEffect;
+
 
 }
