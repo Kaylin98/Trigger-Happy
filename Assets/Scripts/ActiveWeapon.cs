@@ -28,6 +28,11 @@ public class ActiveWeapon : MonoBehaviour
         HandleShoot();
     }
 
+    public void SwitchWeapon(WeaponSO WeaponSO)
+    {
+        Debug.Log($"Switched Weapon to {WeaponSO.name}");
+    }
+
     void HandleShoot()
     {
         if (!input.shoot) return;
