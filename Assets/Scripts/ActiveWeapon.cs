@@ -36,7 +36,9 @@ public class ActiveWeapon : MonoBehaviour
 
         currentWeapon.Shoot(weaponSO);
         animator.Play(SHOOT_STRING, 0, 0f);
-        input.ShootInput(false);
         timeSinceLastShot = 0f;
+        
+        if (!weaponSO.IsAutomatic)
+            input.ShootInput(false);
     }
 }

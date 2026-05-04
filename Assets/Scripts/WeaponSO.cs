@@ -7,6 +7,7 @@ public class WeaponSO : ScriptableObject
     public float FireRate = .5f;
     public int MaxAmmo = 30;
     public GameObject impactEffect;
+    public bool IsAutomatic = false;
 
 
 }
