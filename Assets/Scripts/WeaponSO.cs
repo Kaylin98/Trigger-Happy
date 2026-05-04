@@ -10,6 +10,6 @@ public class WeaponSO : ScriptableObject
     public GameObject impactEffect;
     public bool IsAutomatic = false;
     public bool CanZoom = false;
-
-
+    public float ZoomFOV = 10f;
+    public float ZoomSensitivityMultiplier = .4f;
 }
