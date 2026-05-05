@@ -2407,7 +2407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &213684313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13779,7 +13779,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6298744404447701511, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
   m_PrefabInstance: {fileID: 694302343951296710}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1999031616}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
@@ -19562,11 +19562,40 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1057056881}
   m_SourcePrefab: {fileID: 100100000, guid: 1cc16197903d34f49a7826898b5a9946, type: 3}
+--- !u!1 &1999031616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1804216767366672268, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
+  m_PrefabInstance: {fileID: 694302343951296710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1999031617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2363695563714277968, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
   m_PrefabInstance: {fileID: 694302343951296710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999031618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999031616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  SignalCombinationMode: 0
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &2003892529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21401,7 +21430,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1804216767366672268, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1999031618}
   m_SourcePrefab: {fileID: 100100000, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
 --- !u!1001 &3628092768992514637
 PrefabInstance:
@@ -21545,6 +21577,10 @@ PrefabInstance:
       propertyPath: zoomReticle
       value: 
       objectReference: {fileID: 1313349844}
+    - target: {fileID: 107975943587514586, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
+      propertyPath: weaponCamera
+      value: 
+      objectReference: {fileID: 134091895}
     - target: {fileID: 107975943587514586, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
       propertyPath: virtualCamera
       value: 
