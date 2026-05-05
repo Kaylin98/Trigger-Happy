@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6853843314839196744}
   - component: {fileID: 6110723680385559669}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Sniper Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6009517929375327434}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,6 +93,10 @@ PrefabInstance:
     - target: {fileID: 1230136752141207843, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: m_Name
       value: Muzzle Flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230136752141207843, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6277202941128332789, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -201,9 +205,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6884815727347347827, guid: bd333dea97c5658478038ee2d7d42c6d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bd333dea97c5658478038ee2d7d42c6d, type: 3}
       propertyPath: m_Name
       value: blaster-f
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd333dea97c5658478038ee2d7d42c6d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551238392589077143, guid: bd333dea97c5658478038ee2d7d42c6d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
