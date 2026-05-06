@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1741321790590146298}
   - component: {fileID: 2056666627347653682}
   - component: {fileID: 7729214004216776379}
-  - component: {fileID: 2915630260038341647}
   - component: {fileID: 2811073316298597819}
   m_Layer: 0
   m_Name: Robot Explosion VFX
@@ -4710,19 +4709,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &2915630260038341647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962248585140710174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a2fb0b130ef9c4183b9837255d8d02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Explosion
-  radius: 1.5
 --- !u!114 &2811073316298597819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4736,6 +4722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Explosion
   radius: 1.5
+  damage: 3
 --- !u!1 &4857177384567558643
 GameObject:
   m_ObjectHideFlags: 0
