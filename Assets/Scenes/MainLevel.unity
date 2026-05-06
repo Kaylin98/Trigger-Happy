@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.8
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -5074,6 +5074,7 @@ Transform:
   m_Children:
   - {fileID: 942670141}
   - {fileID: 1999031617}
+  - {fileID: 706063975}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &500952629 stripped
@@ -6857,6 +6858,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8519f3e9e46fc1b4c83c58c9a5813189, type: 3}
+--- !u!1 &706063974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706063975}
+  - component: {fileID: 706063976}
+  m_Layer: 0
+  m_Name: Death Virtual Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &706063975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706063974}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.20756654, y: 0.51812273, z: -0.13884105, w: -0.8180392}
+  m_LocalPosition: {x: 25.990295, y: 18.63047, z: -29.186914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 491324319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &706063976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706063974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 1
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60
+    OrthographicSize: 10
+    NearClipPlane: 0.01
+    FarClipPlane: 500
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!1001 &706488272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12339,6 +12415,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5091356830218409021, guid: 656d44e8a0f40ce4b8f93ee38394e3c5, type: 3}
   m_PrefabInstance: {fileID: 1569461741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1289089939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5663998671352410352, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
+  m_PrefabInstance: {fileID: 6718221011928501358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289089946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289089939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae905021fe4060b448f11b8d2ee8e771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  startingHealth: 5
+  deathCamera: {fileID: 706063976}
+  weaponCamera: {fileID: 134091892}
 --- !u!1001 &1290823573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19609,7 +19705,7 @@ MonoBehaviour:
     AmplitudeGain: 1
     FrequencyGain: 1
     Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+    m_NoiseOffsets: {x: -958.9679, y: -349.03085, z: 1.4075317}
 --- !u!1001 &2003892529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21391,7 +21487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1804216767366672268, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
       propertyPath: m_Name
-      value: PlayerFollowCamera
+      value: Player Follow Camera
       objectReference: {fileID: 0}
     - target: {fileID: 2363695563714277968, guid: 56644adb633319642b7c0c66ce3c62f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21735,7 +21831,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7454628253768048343, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
       insertIndex: -1
       addedObject: {fileID: 134091892}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5663998671352410352, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1289089946}
   m_SourcePrefab: {fileID: 100100000, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
 --- !u!1001 &7487958772534239741
 PrefabInstance:
@@ -21779,15 +21878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796593613099495734, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1796593613099495734, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1796593613099495734, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1796593613099495734, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21803,7 +21902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3460982057698690013, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: m_Name
-      value: MainCamera
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6704129896652838281, guid: e1e1ac1cab07a2943b4858dce5a3567f, type: 3}
       propertyPath: field of view
