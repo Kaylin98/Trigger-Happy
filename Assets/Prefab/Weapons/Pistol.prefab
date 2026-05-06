@@ -51,7 +51,6 @@ MonoBehaviour:
   interactionLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  impulseSource: {fileID: 8360701537178663120}
 --- !u!114 &8360701537178663120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +156,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f459500efe78a0b48b29caaa8640fa5c, type: 2}
+    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8945980240057072277, guid: fe4733319fa675c438c23bf2ba0c49d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.199

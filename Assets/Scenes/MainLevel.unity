@@ -11203,8 +11203,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6764870397393581631, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 560602518105447389, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
@@ -15367,6 +15372,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 468533968}
     m_Modifications:
+    - target: {fileID: 560602518107702557, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3738645157117411826, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_Name
       value: Robot
@@ -15566,8 +15575,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6764870397393581631, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 560602518105447389, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
