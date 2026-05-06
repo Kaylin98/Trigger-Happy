@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   startingHealth: 3
+  explosionEffect: {fileID: 2056666627347653682, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
 --- !u!136 &2340685785390181603
 CapsuleCollider:
   m_ObjectHideFlags: 0
