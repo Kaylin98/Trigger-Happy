@@ -15372,21 +15372,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 468533968}
     m_Modifications:
+    - target: {fileID: 1953178594489333671, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3738645157117411826, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
     - target: {fileID: 5226618519187778681, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.902378
+      value: 33.41
       objectReference: {fileID: 0}
     - target: {fileID: 5226618519187778681, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11000013
+      value: -1.91
       objectReference: {fileID: 0}
     - target: {fileID: 5226618519187778681, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.275891
+      value: 12.56
       objectReference: {fileID: 0}
     - target: {fileID: 5226618519187778681, guid: 235126e4092b9d14d8a5ab6f78ddf8bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21567,75 +21571,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d138b16790ffef4eab40a1bcc6b7047, type: 3}
---- !u!1001 &5622296965690707721
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.7885583
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.201947
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7133226
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7008359
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741321790590146298, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056666627347653682, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: stopAction
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056666627347653682, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617119016737076072, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3962248585140710174, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
-      propertyPath: m_Name
-      value: Robot Explosion VFX
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7caba4d18af9cc243b1f8741d2ca9566, type: 3}
 --- !u!1001 &6718221011928501358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21774,7 +21709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5568857939941598289, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5663998671352410352, guid: 07c5d068be551cb4096fdd58a6110564, type: 3}
       propertyPath: m_Name
@@ -22003,4 +21938,3 @@ SceneRoots:
   - {fileID: 1784334012}
   - {fileID: 468533968}
   - {fileID: 1564753407}
-  - {fileID: 5622296965690707721}
