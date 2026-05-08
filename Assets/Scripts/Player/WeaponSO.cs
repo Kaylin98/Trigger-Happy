@@ -12,4 +12,8 @@ public class WeaponSO : ScriptableObject
     public float ZoomFOV = 10f;
     public float ZoomSensitivityMultiplier = .4f;
     public int MagazineSize = 12;
+
+    [Header("UI")]
+    public Sprite crosshairSprite;
+    public Sprite SniperZoomedCrosshairSprite;
 }

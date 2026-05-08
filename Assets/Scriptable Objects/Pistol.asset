@@ -21,3 +21,5 @@ MonoBehaviour:
   ZoomFOV: 10
   ZoomSensitivityMultiplier: 0.4
   MagazineSize: 12
+  crosshairSprite: {fileID: 21300000, guid: e8af026c4ce1f494891faea9171868bf, type: 3}
+  SniperZoomedCrosshairSprite: {fileID: 0}

@@ -2,12 +2,14 @@ using StarterAssets;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActiveWeapon : MonoBehaviour
 {
     [SerializeField] WeaponSO startingWeaponSO;
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] Camera weaponCamera;
+    [SerializeField] Image crosshair;
 
     [SerializeField] GameObject zoomReticle;
     [SerializeField] TMP_Text ammoText;
@@ -63,6 +65,8 @@ public class ActiveWeapon : MonoBehaviour
         currentWeapon = newWeapon;
         this.currentWeaponSO = WeaponSO;
 
+        crosshair.sprite = WeaponSO.crosshairSprite != null ? WeaponSO.crosshairSprite : null;
+
         AdjustAmmo(WeaponSO.MagazineSize);
     }
 
@@ -90,19 +94,33 @@ public class ActiveWeapon : MonoBehaviour
     {
         if (!currentWeaponSO.CanZoom) return;
 
-        if (input.zoom)
-        {
-            zoomReticle.SetActive(true);
-            virtualCamera.m_Lens.FieldOfView = currentWeaponSO.ZoomFOV;
-            weaponCamera.fieldOfView = 0;
-            firstPersonController.ChangeRotationSpeed(currentWeaponSO.ZoomSensitivityMultiplier);
-        }
-        else
-        {
-            zoomReticle.SetActive(false);
-            virtualCamera.m_Lens.FieldOfView = defaultFOV;
-            weaponCamera.fieldOfView = defaultFOV;
-            firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
-        }
+        if (input.zoom) ZoomIn();
+        else ZoomOut();
+    }
+
+    void ZoomIn()
+    {
+        SetCrosshair(currentWeaponSO.SniperZoomedCrosshairSprite, Vector3.one * 3f);
+        zoomReticle.SetActive(true);
+        virtualCamera.m_Lens.FieldOfView = currentWeaponSO.ZoomFOV;
+        weaponCamera.fieldOfView = 0;
+        firstPersonController.ChangeRotationSpeed(currentWeaponSO.ZoomSensitivityMultiplier);
+    }
+
+    void ZoomOut()
+    {
+        SetCrosshair(currentWeaponSO.crosshairSprite, Vector3.one);
+        zoomReticle.SetActive(false);
+        virtualCamera.m_Lens.FieldOfView = defaultFOV;
+        weaponCamera.fieldOfView = defaultFOV;
+        firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
+    }
+
+    void SetCrosshair(Sprite sprite, Vector3 scale)
+    {
+        if (sprite == null) return;
+        crosshair.sprite = sprite;
+        crosshair.transform.localScale = scale;
+        crosshair.enabled = true;
     }
 }
