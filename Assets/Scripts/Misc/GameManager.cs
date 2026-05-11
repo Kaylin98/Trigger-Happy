@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         if (enemiesLeft <= 0)
         {
             winText.gameObject.SetActive(true);
+            AudioManager.Instance.PlayWin();
         }
     }
 

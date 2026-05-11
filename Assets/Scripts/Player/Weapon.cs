@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     public void Shoot(WeaponSO weaponSO)
     {
         muzzleFlash.Play();
+        AudioManager.Instance.PlaySFX(weaponSO.shootSound);
         RaycastHit hit;
         impulseSource.GenerateImpulse();
 

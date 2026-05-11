@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     public void SelfDestruct()
     {
         Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
+        AudioManager.Instance.PlayExplosion();
         gameManager.AdjustEnemiesLeftText(-1);
         Destroy(this.gameObject);
     }

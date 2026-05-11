@@ -552,6 +552,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2682641019723820677, guid: b39182eee30ff8a4084d7f588a6343b1, type: 3}
   fireRate: 2
   projectileDamage: 4
+  turretShootClip: {fileID: 8300000, guid: 0368f8042dd318a44a0f7dd5bdac77bf, type: 3}
 --- !u!136 &7283734125216957217
 CapsuleCollider:
   m_ObjectHideFlags: 0

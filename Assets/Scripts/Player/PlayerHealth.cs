@@ -29,12 +29,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            AudioManager.Instance.PlayGameOver();
             PlayerGameOver();
         }
     }
 
     private void PlayerGameOver()
     {
+        AudioManager.Instance.PlayGameOver();
         weaponCamera.parent = null;
         deathCamera.Priority = deathCameraPriority;
         gameOverContainer.SetActive(true);

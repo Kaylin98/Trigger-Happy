@@ -35,8 +35,8 @@ public class ActiveWeapon : MonoBehaviour
     }
     void Start()
     {
-        SwitchWeapon(startingWeaponSO);
-        AdjustAmmo(currentWeaponSO.MagazineSize);
+        SwitchWeapon(startingWeaponSO, false);
+        AdjustAmmo(currentWeaponSO.MagazineSize, false);
     }
 
     void Update()
@@ -44,30 +44,35 @@ public class ActiveWeapon : MonoBehaviour
         HandleShoot();
         HandleZoom();
     }
-    public void AdjustAmmo(int amount)
+    public void AdjustAmmo(int amount, bool playSound = true)
     {
         currentAmmo += amount;
-        
         if(currentAmmo > currentWeaponSO.MagazineSize)
+        {
+            if (playSound) AudioManager.Instance.PlayAmmoPickup();
             currentAmmo = currentWeaponSO.MagazineSize;
+        }
         else if (currentAmmo < 0)
+        {
             currentAmmo = 0;
+        }
 
         ammoText.text = currentAmmo.ToString("D2");
     }
 
-    public void SwitchWeapon(WeaponSO WeaponSO)
+    public void SwitchWeapon(WeaponSO weaponSO, bool playSound = true)
     {
         if(currentWeapon != null)
             Destroy(currentWeapon.gameObject);
 
-        Weapon newWeapon = Instantiate(WeaponSO.weaponPrefab, transform).GetComponent<Weapon>();
+        Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
+        if (playSound) AudioManager.Instance.PlayWeaponPickup();
         currentWeapon = newWeapon;
-        this.currentWeaponSO = WeaponSO;
+        this.currentWeaponSO = weaponSO;
 
-        crosshair.sprite = WeaponSO.crosshairSprite != null ? WeaponSO.crosshairSprite : null;
+        crosshair.sprite = weaponSO.crosshairSprite != null ? weaponSO.crosshairSprite : null;
 
-        AdjustAmmo(WeaponSO.MagazineSize);
+        AdjustAmmo(weaponSO.MagazineSize, false);
     }
 
     void HandleShoot()

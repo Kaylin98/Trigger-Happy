@@ -16,4 +16,7 @@ public class WeaponSO : ScriptableObject
     [Header("UI")]
     public Sprite crosshairSprite;
     public Sprite SniperZoomedCrosshairSprite;
+    
+    [Header("Audio")]
+    public AudioClip shootSound;
 }
