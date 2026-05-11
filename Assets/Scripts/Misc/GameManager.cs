@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text enemiesLeftText;
     [SerializeField] TMP_Text winText;
     int enemiesLeft = 0;
-    const string ENEMIES_LEFT_TEXT = "Enemies Left: ";
+    const string ENEMIES_LEFT_TEXT = "x ";
 
     public void AdjustEnemiesLeftText(int amount)
     {
