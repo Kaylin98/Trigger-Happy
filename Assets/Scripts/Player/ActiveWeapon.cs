@@ -16,12 +16,16 @@ public class ActiveWeapon : MonoBehaviour
     Animator animator;
     WeaponSO currentWeaponSO;
     StarterAssetsInputs input;
+    public WeaponSO CurrentWeaponSO => currentWeaponSO;
     Weapon currentWeapon;
     FirstPersonController firstPersonController;
     float defaultFOV;
     float defaultRotationSpeed;
     float timeSinceLastShot = 0f;
     int currentAmmo;
+
+    bool isZoomed = false;
+    bool isMobile;
 
     const string SHOOT_STRING = "Shoot";
 
@@ -32,6 +36,9 @@ public class ActiveWeapon : MonoBehaviour
         firstPersonController = GetComponentInParent<FirstPersonController>();
         defaultFOV = virtualCamera.m_Lens.FieldOfView;
         defaultRotationSpeed = firstPersonController.RotationSpeed;
+
+        isMobile = Application.platform == RuntimePlatform.Android || 
+               Application.platform == RuntimePlatform.IPhonePlayer;
     }
     void Start()
     {
@@ -62,6 +69,8 @@ public class ActiveWeapon : MonoBehaviour
 
     public void SwitchWeapon(WeaponSO weaponSO, bool playSound = true)
     {
+        isZoomed = false;
+        
         if(currentWeapon != null)
             Destroy(currentWeapon.gameObject);
 
@@ -99,6 +108,12 @@ public class ActiveWeapon : MonoBehaviour
     {
         if (!currentWeaponSO.CanZoom) return;
 
+        if (isMobile)
+        {
+            if (isZoomed) ZoomIn();
+            else ZoomOut();
+        }
+
         if (input.zoom) ZoomIn();
         else ZoomOut();
     }
@@ -119,6 +134,12 @@ public class ActiveWeapon : MonoBehaviour
         virtualCamera.m_Lens.FieldOfView = defaultFOV;
         weaponCamera.fieldOfView = defaultFOV;
         firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
+    }
+
+    public void MobileToggleZoom()
+    {
+        if (!currentWeaponSO.CanZoom) return;
+        isZoomed = !isZoomed;
     }
 
     void SetCrosshair(Sprite sprite, Vector3 scale)

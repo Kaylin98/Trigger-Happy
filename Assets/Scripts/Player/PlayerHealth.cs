@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                shieldBars[i].enabled = false;
+                shieldBars[i].color = new Color(shieldBars[i].color.r, shieldBars[i].color.g, shieldBars[i].color.b, 0.3f);
             }
         }
     }
