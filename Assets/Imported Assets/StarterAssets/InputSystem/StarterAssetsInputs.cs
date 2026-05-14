@@ -65,11 +65,23 @@ namespace StarterAssets
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
+			if (Time.timeScale < 0.5f)
+			{
+				move = Vector2.zero;
+				return;
+			}
+			
 			move = newMoveDirection;
-		} 
+		}
 
 		public void LookInput(Vector2 newLookDirection)
 		{
+			if (Time.timeScale < 0.5f)
+			{
+				look = Vector2.zero;
+				return;
+			}
+			
 			look = newLookDirection;
 		}
 

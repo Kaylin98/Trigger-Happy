@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] CinemachineCamera deathCamera;
     [SerializeField] Transform weaponCamera;
     [SerializeField] Image[] shieldBars;
-    [SerializeField] GameObject gameOverContainer;
+    
     int currentHealth;
     int deathCameraPriority = 20;
 
@@ -29,19 +29,18 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            AudioManager.Instance.PlayGameOver();
             PlayerGameOver();
         }
     }
 
-    private void PlayerGameOver()
+    void PlayerGameOver()
     {
         AudioManager.Instance.PlayGameOver();
         weaponCamera.parent = null;
         deathCamera.Priority = deathCameraPriority;
-        gameOverContainer.SetActive(true);
-        StarterAssetsInputs playerInput = FindFirstObjectByType<StarterAssetsInputs>();
-        playerInput.SetCursorState(false);
+
+        MenuManager.Instance.TriggerGameOver();
+        
         Destroy(this.gameObject);
     }
 

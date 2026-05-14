@@ -48,6 +48,7 @@ public class ActiveWeapon : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
         HandleShoot();
         HandleZoom();
     }
