@@ -3,7 +3,6 @@ using UnityEngine;
 public class MobileUIManager : MonoBehaviour
 {
     [SerializeField] GameObject mobileControls;
-    [SerializeField] UIVirtualButton shootButton;
     [SerializeField] UIVirtualButton zoomButton;
     [SerializeField] ActiveWeapon activeWeapon;
 
@@ -14,9 +13,6 @@ public class MobileUIManager : MonoBehaviour
                         Application.platform == RuntimePlatform.IPhonePlayer;
         
         mobileControls.SetActive(isMobile);
-
-        // Force landscape
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     void Update()
