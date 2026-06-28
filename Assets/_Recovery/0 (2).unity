@@ -3022,7 +3022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &213684313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3053,7 +3053,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ffc7dc251cf8d534aaf6a1420b4d508e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 920a3563a0641b84583991786e96c56a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &213684314
 Transform:
@@ -10786,7 +10786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   backgroundMusic: {fileID: 8300000, guid: 843627a0cb2fe56478e4c43615b6d984, type: 3}
-  musicVolume: 0.15
+  musicVolume: 0.18
   weaponPickupClip: {fileID: 8300000, guid: 9158afb6966d445db9caf1dccf7acbcc, type: 3}
   weaponPickupVolume: 0.7
   ammoPickupClip: {fileID: 8300000, guid: eb5685b26a6494994af389a3293064e8, type: 3}

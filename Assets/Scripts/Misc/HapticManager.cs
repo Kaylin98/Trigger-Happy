@@ -1,5 +1,7 @@
 using UnityEngine;
-using CandyCoded.HapticFeedback; 
+#if UNITY_ANDROID || UNITY_IOS
+using CandyCoded.HapticFeedback;
+#endif
 
 public class HapticManager : MonoBehaviour
 {
@@ -13,14 +15,19 @@ public class HapticManager : MonoBehaviour
 
     public void Vibrate()
     {
-        HapticFeedback.MediumFeedback(); 
+#if UNITY_ANDROID || UNITY_IOS
+        HapticFeedback.MediumFeedback();
+#endif
     }
 
     public void VibrateOnPress(bool isPressed)
     {
+        #if UNITY_ANDROID || UNITY_IOS
         if (isPressed)
         {
             HapticFeedback.MediumFeedback();
         }
+#endif
+        
     }
 }

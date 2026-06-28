@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     [SerializeField] AudioClip backgroundMusic;
-    [SerializeField] [Range(0f, 1f)] float musicVolume = 0.3f; // subtle, sits in background
+    [SerializeField] [Range(0f, 1f)] float musicVolume = 0.2f; // subtle, sits in background
 
     [Header("Pickups")]
     [SerializeField] AudioClip weaponPickupClip;
