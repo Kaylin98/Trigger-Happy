@@ -14,7 +14,7 @@
 ---
 
 ## 🎮 Play The Game
-**[👉 PLAY THE GAME NOW 👈](#)**
+**[👉 PLAY THE GAME NOW 👈](https://play.unity.com/api/v1/games/game/85304add-b65f-4304-984f-384633c0a894/build/latest/frame)**
 
 ---
 
